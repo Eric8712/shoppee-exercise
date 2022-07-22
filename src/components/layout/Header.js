@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Container from "../common/Container";
 
 const StyledHeader = styled.div`
     background-color: #d1011c;
@@ -7,10 +8,13 @@ const StyledHeader = styled.div`
     width: 100vw;
 `
 
+
 const Header = () => {
     return (
         <StyledHeader>
-            This is a header
+            <Container>
+                Header
+            </Container>
         </StyledHeader>
     )
 }

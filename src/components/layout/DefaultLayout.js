@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import styled, {css} from "styled-components";
+import Footer from "./Footer";
+import Container from "../common/Container";
 
 const  PageHeader = styled.div`
     ${props => props.fixed && css`
@@ -14,7 +16,10 @@ return(
         <PageHeader fixed={fixedHeader}>
             <Header />
         </PageHeader>
+        <Container>
         {children}
+        </Container>
+        <Footer />
     </div>
 )
 }
