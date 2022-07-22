@@ -5,12 +5,13 @@ import ProductCollectionPage from './Pages/ProductCollectionPage';
 import CartPage from './Pages/CartPages'
 import CheckoutPage from './Pages/CheckOutPage'
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   BrowserRouter,
   Redirect,
 } from "react-router-dom";
+import 'antd/dist/antd.css'
+
 const App = () => {
   return (
    <BrowserRouter>
