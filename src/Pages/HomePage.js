@@ -116,7 +116,7 @@ const HomePage = () => {
             </CustomerContainer>
             <ProductCollectionContainer>
                 <ProductContainer>
-                    <ProductCard />
+                    <ProductCard title='foo' coverUrl={Banner1}/>
                 </ProductContainer>
                 <ProductContainer>
                     <ProductCard />
