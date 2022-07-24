@@ -5,10 +5,13 @@ import Footer from "./Footer";
 import Container from "../common/Container";
 
 const  PageHeader = styled(Header)`
-    ${props => props.fixed && css`
+    ${(props) => 
+    props.fixed &&
+    css`
+    z-index: 1;
     position: fixed;
     `}
-`
+`;
 
 const DefaultLayout = ({ fixedHeader, children}) => {
 return(

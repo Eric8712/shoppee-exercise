@@ -1,5 +1,5 @@
 import React from "react";
-import DefaultLayout from "../components/layout/DefaultLayout";
+import DefaultLayout from '../components/layout/DefaultLayout'
 import styled from "styled-components";
 import Clearfix from "../components/common/ClearFix";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import Carousel from "antd/lib/carousel";
 import Banner1 from '../components/image/banner/banner1.jpg'
 import Banner2 from '../components/image/banner/banner2.jpg'
 import Banner3 from '../components/image/banner/banner3.jpg'
+import ProductCard from "../components/product/ProductCard";
 
 
 const BannerBox = styled.div`
@@ -43,6 +44,24 @@ const BannerEeatureContainer = styled.div`
 const BannerFeatureColumn = styled.div`
     width: 33.33%;
     text-align: center;
+`
+
+const CustomerContainer = styled.div`
+    margin-bottom: 48px;
+`
+const ProductCollectionContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+`
+const ProductContainer = styled.div`
+    width: 100%;
+    @media (min-width: 577px) {
+        width:50%;
+    }
+    @media (min-width: 769px) {
+        width:20%;
+    }
 `
 
 const Image = styled.div`
@@ -90,9 +109,31 @@ const HomePage = () => {
                 <BannerFeatureColumn>假一賠二</BannerFeatureColumn>
             </BannerEeatureContainer>
             </BannerBox>
+            <CustomerContainer>
                 <Link to='advertisting'>
                 <Image height={100} url={Banner3}></Image>
                 </Link>
+            </CustomerContainer>
+            <ProductCollectionContainer>
+                <ProductContainer>
+                    <ProductCard />
+                </ProductContainer>
+                <ProductContainer>
+                    <ProductCard />
+                </ProductContainer>
+                <ProductContainer>
+                    <ProductCard />
+                </ProductContainer>
+                <ProductContainer>
+                    <ProductCard />
+                </ProductContainer>
+                <ProductContainer>
+                    <ProductCard />
+                </ProductContainer>
+                <ProductContainer>
+                    <ProductCard />
+                </ProductContainer>
+            </ProductCollectionContainer>
         </DefaultLayout>
     )
 }
